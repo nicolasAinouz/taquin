@@ -1,0 +1,382 @@
+\hypertarget{logic_8h}{}\doxysection{Référence du fichier src/include/logic.h}
+\label{logic_8h}\index{src/include/logic.h@{src/include/logic.h}}
+{\ttfamily \#include \char`\"{}struct.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de logic.\+h\+:
+% FIG 0
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier \+:
+% FIG 1
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_8h_a3c10129367cfae8f208778364a6a928e}{Board}} $\ast$ \mbox{\hyperlink{logic_8h_a5d0eb215545a8a2d4194831fceb6a3c5}{init\+\_\+plateau}} ()
+\begin{DoxyCompactList}\small\item\em Initialise le plateau de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_aa4620b517f7b558f19d8bc31c7a0ec19}{cut\+\_\+image}} (M\+L\+V\+\_\+\+Image $\ast$image)
+\begin{DoxyCompactList}\small\item\em Coupe l\textquotesingle{}image en 16 morceaux et l\textquotesingle{}assigne à chaque case du plateau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_a1905fe84eb39f020b32c58baf7a76758}{shuffle}} ()
+\begin{DoxyCompactList}\small\item\em Mélange le plateau de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287}{swap}} (int x1, int y1, int x2, int y2)
+\begin{DoxyCompactList}\small\item\em Echange deux cases du plateau. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_8h_ac68f7ceb26f461247f93909b0d6ef87f}{Carre}} \mbox{\hyperlink{logic_8h_a2c767434c92ade574b5f6a37f27c35a5}{get\+\_\+position\+\_\+carre\+\_\+click}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Retourne la case du plateau sur laquelle l\textquotesingle{}utilisateur a cliqué en fonction des coordonnées du clic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_ab61017a7ba5769c53742ab1e79ac31ba}{chek\+\_\+if\+\_\+carre\+\_\+click\+\_\+is\+\_\+around\+\_\+black\+\_\+carre\+\_\+and\+\_\+swap}} (\mbox{\hyperlink{struct_8h_ac68f7ceb26f461247f93909b0d6ef87f}{Carre}} carre\+\_\+click)
+\begin{DoxyCompactList}\small\item\em Vérifie si la case sur laquelle l\textquotesingle{}utilisateur a cliqué est à côté de la case vide et l\textquotesingle{}échange si c\textquotesingle{}est le cas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logic_8h_a725476abc9735c8ad148677fad2c1b90}{move\+\_\+case}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Gère le déplacement des cases du plateau. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{logic_8h_ad9360a8f58baa7cfe7598f7b8914e277}{check\+\_\+if\+\_\+victory}} ()
+\begin{DoxyCompactList}\small\item\em Vérifie si le joueur a gagné. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{logic_8h_ad9360a8f58baa7cfe7598f7b8914e277}\label{logic_8h_ad9360a8f58baa7cfe7598f7b8914e277}} 
+\index{logic.h@{logic.h}!check\_if\_victory@{check\_if\_victory}}
+\index{check\_if\_victory@{check\_if\_victory}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{check\_if\_victory()}{check\_if\_victory()}}
+{\footnotesize\ttfamily int check\+\_\+if\+\_\+victory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vérifie si le joueur a gagné. 
+
+
+
+Définition à la ligne 154 du fichier logic.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{155 \{}
+\DoxyCodeLine{156     \textcolor{keywordtype}{int} victory = 1;}
+\DoxyCodeLine{157     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{struct_8h_aa6e1cb1e33dd2dba64a1481445155044}{NB\_LIG}}; i++)}
+\DoxyCodeLine{158     \{}
+\DoxyCodeLine{159         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{struct_8h_a3abe884c18182831cac6f12ecaf06f8b}{NB\_COL}}; j++)}
+\DoxyCodeLine{160         \{}
+\DoxyCodeLine{161             \textcolor{keywordflow}{if} (!(j == 3 \&\& i == 3))}
+\DoxyCodeLine{162             \{}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[i][j].\mbox{\hyperlink{structcarre_a0c3fa6a47c7ce3622d1ebfac9d89f0a6}{line}} != i || \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[i][j].\mbox{\hyperlink{structcarre_a1c5ff9af4a426b4959f4245f33df7c74}{column}} != j)}
+\DoxyCodeLine{165                 \{}
+\DoxyCodeLine{166                     victory = 0;}
+\DoxyCodeLine{167                 \}}
+\DoxyCodeLine{168             \}}
+\DoxyCodeLine{169         \}}
+\DoxyCodeLine{170     \}}
+\DoxyCodeLine{171     \textcolor{keywordflow}{return} victory;}
+\DoxyCodeLine{172 \}}
+
+\end{DoxyCode}
+
+
+Références board\+::bloc, carre\+::column, carre\+::line, N\+B\+\_\+\+C\+OL, N\+B\+\_\+\+L\+IG, et p.
+
+
+
+Référencé par main().
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 2
+\mbox{\Hypertarget{logic_8h_ab61017a7ba5769c53742ab1e79ac31ba}\label{logic_8h_ab61017a7ba5769c53742ab1e79ac31ba}} 
+\index{logic.h@{logic.h}!chek\_if\_carre\_click\_is\_around\_black\_carre\_and\_swap@{chek\_if\_carre\_click\_is\_around\_black\_carre\_and\_swap}}
+\index{chek\_if\_carre\_click\_is\_around\_black\_carre\_and\_swap@{chek\_if\_carre\_click\_is\_around\_black\_carre\_and\_swap}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{chek\_if\_carre\_click\_is\_around\_black\_carre\_and\_swap()}{chek\_if\_carre\_click\_is\_around\_black\_carre\_and\_swap()}}
+{\footnotesize\ttfamily void chek\+\_\+if\+\_\+carre\+\_\+click\+\_\+is\+\_\+around\+\_\+black\+\_\+carre\+\_\+and\+\_\+swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_8h_ac68f7ceb26f461247f93909b0d6ef87f}{Carre}}}]{carre\+\_\+click }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la case sur laquelle l\textquotesingle{}utilisateur a cliqué est à côté de la case vide et l\textquotesingle{}échange si c\textquotesingle{}est le cas. 
+
+
+
+Définition à la ligne 100 du fichier logic.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101 \{}
+\DoxyCodeLine{102     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{struct_8h_aa6e1cb1e33dd2dba64a1481445155044}{NB\_LIG}}; i++)}
+\DoxyCodeLine{103     \{}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{struct_8h_a3abe884c18182831cac6f12ecaf06f8b}{NB\_COL}}; j++)}
+\DoxyCodeLine{106         \{}
+\DoxyCodeLine{107             \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[j][i].\mbox{\hyperlink{structcarre_a0c3fa6a47c7ce3622d1ebfac9d89f0a6}{line}} == carre\_click.\mbox{\hyperlink{structcarre_a0c3fa6a47c7ce3622d1ebfac9d89f0a6}{line}} \&\& \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[j][i].\mbox{\hyperlink{structcarre_a1c5ff9af4a426b4959f4245f33df7c74}{column}} == carre\_click.\mbox{\hyperlink{structcarre_a1c5ff9af4a426b4959f4245f33df7c74}{column}})}
+\DoxyCodeLine{108             \{}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[j][i + 1].\mbox{\hyperlink{structcarre_a0c3fa6a47c7ce3622d1ebfac9d89f0a6}{line}} == -\/1)}
+\DoxyCodeLine{111                 \{}
+\DoxyCodeLine{112                     \mbox{\hyperlink{logic_8c_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287}{swap}}(i, j, i + 1, j);}
+\DoxyCodeLine{113                 \}}
+\DoxyCodeLine{114                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[j][i -\/ 1].\mbox{\hyperlink{structcarre_a0c3fa6a47c7ce3622d1ebfac9d89f0a6}{line}} == -\/1)}
+\DoxyCodeLine{115                 \{}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117                     \mbox{\hyperlink{logic_8c_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287}{swap}}(i, j, i -\/ 1, j);}
+\DoxyCodeLine{118                 \}}
+\DoxyCodeLine{119                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[j + 1][i].\mbox{\hyperlink{structcarre_a0c3fa6a47c7ce3622d1ebfac9d89f0a6}{line}} == -\/1)}
+\DoxyCodeLine{120                 \{}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122                     \mbox{\hyperlink{logic_8c_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287}{swap}}(i, j, i, j + 1);}
+\DoxyCodeLine{123                 \}}
+\DoxyCodeLine{124                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[j -\/ 1][i].\mbox{\hyperlink{structcarre_a0c3fa6a47c7ce3622d1ebfac9d89f0a6}{line}} == -\/1)}
+\DoxyCodeLine{125                 \{}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127                     \mbox{\hyperlink{logic_8c_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287}{swap}}(i, j, i, j -\/ 1);}
+\DoxyCodeLine{128                 \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130                 \textcolor{keywordflow}{return};}
+\DoxyCodeLine{131             \}}
+\DoxyCodeLine{132         \}}
+\DoxyCodeLine{133     \}}
+\DoxyCodeLine{134 \}}
+
+\end{DoxyCode}
+
+
+Références board\+::bloc, carre\+::column, carre\+::line, N\+B\+\_\+\+C\+OL, N\+B\+\_\+\+L\+IG, p, et swap().
+
+
+
+Référencé par move\+\_\+case(), et shuffle().
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 3
+Voici le graphe des appelants de cette fonction \+:
+% FIG 4
+\mbox{\Hypertarget{logic_8h_aa4620b517f7b558f19d8bc31c7a0ec19}\label{logic_8h_aa4620b517f7b558f19d8bc31c7a0ec19}} 
+\index{logic.h@{logic.h}!cut\_image@{cut\_image}}
+\index{cut\_image@{cut\_image}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{cut\_image()}{cut\_image()}}
+{\footnotesize\ttfamily void cut\+\_\+image (\begin{DoxyParamCaption}\item[{M\+L\+V\+\_\+\+Image $\ast$}]{image }\end{DoxyParamCaption})}
+
+
+
+Coupe l\textquotesingle{}image en 16 morceaux et l\textquotesingle{}assigne à chaque case du plateau. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em image} & \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 46 du fichier logic.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{struct_8h_aa6e1cb1e33dd2dba64a1481445155044}{NB\_LIG}}; i++)}
+\DoxyCodeLine{49     \{}
+\DoxyCodeLine{50         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{struct_8h_a3abe884c18182831cac6f12ecaf06f8b}{NB\_COL}}; j++)}
+\DoxyCodeLine{51         \{}
+\DoxyCodeLine{52             ((\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}})[i][j]).img = MLV\_copy\_partial\_image(image, j * \mbox{\hyperlink{struct_8h_a2a94d2f61c849b4aeed9684aae52c8c1}{SIZE\_CASE}}, i * \mbox{\hyperlink{struct_8h_a2a94d2f61c849b4aeed9684aae52c8c1}{SIZE\_CASE}}, \mbox{\hyperlink{struct_8h_a2a94d2f61c849b4aeed9684aae52c8c1}{SIZE\_CASE}}, \mbox{\hyperlink{struct_8h_a2a94d2f61c849b4aeed9684aae52c8c1}{SIZE\_CASE}});}
+\DoxyCodeLine{53         \}}
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+
+
+Références board\+::bloc, N\+B\+\_\+\+C\+OL, N\+B\+\_\+\+L\+IG, p, et S\+I\+Z\+E\+\_\+\+C\+A\+SE.
+
+
+
+Référencé par create\+\_\+window().
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 5
+\mbox{\Hypertarget{logic_8h_a2c767434c92ade574b5f6a37f27c35a5}\label{logic_8h_a2c767434c92ade574b5f6a37f27c35a5}} 
+\index{logic.h@{logic.h}!get\_position\_carre\_click@{get\_position\_carre\_click}}
+\index{get\_position\_carre\_click@{get\_position\_carre\_click}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{get\_position\_carre\_click()}{get\_position\_carre\_click()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_8h_ac68f7ceb26f461247f93909b0d6ef87f}{Carre}} get\+\_\+position\+\_\+carre\+\_\+click (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Retourne la case du plateau sur laquelle l\textquotesingle{}utilisateur a cliqué en fonction des coordonnées du clic. 
+
+
+
+Définition à la ligne 88 du fichier logic.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89 \{}
+\DoxyCodeLine{90     x = x / (\mbox{\hyperlink{struct_8h_a2a94d2f61c849b4aeed9684aae52c8c1}{SIZE\_CASE}} + \mbox{\hyperlink{struct_8h_ae266d6533efcea2d0fdc2f48ce895207}{SPACE\_BETWEEN\_CASE}});}
+\DoxyCodeLine{91     y = y / (\mbox{\hyperlink{struct_8h_a2a94d2f61c849b4aeed9684aae52c8c1}{SIZE\_CASE}} + \mbox{\hyperlink{struct_8h_ae266d6533efcea2d0fdc2f48ce895207}{SPACE\_BETWEEN\_CASE}});}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93     \textcolor{keywordflow}{return} \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[y][x];}
+\DoxyCodeLine{94 \}}
+
+\end{DoxyCode}
+
+
+Références board\+::bloc, p, S\+I\+Z\+E\+\_\+\+C\+A\+SE, et S\+P\+A\+C\+E\+\_\+\+B\+E\+T\+W\+E\+E\+N\+\_\+\+C\+A\+SE.
+
+
+
+Référencé par move\+\_\+case().
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 6
+\mbox{\Hypertarget{logic_8h_a5d0eb215545a8a2d4194831fceb6a3c5}\label{logic_8h_a5d0eb215545a8a2d4194831fceb6a3c5}} 
+\index{logic.h@{logic.h}!init\_plateau@{init\_plateau}}
+\index{init\_plateau@{init\_plateau}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{init\_plateau()}{init\_plateau()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_8h_a3c10129367cfae8f208778364a6a928e}{Board}}$\ast$ init\+\_\+plateau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise le plateau de jeu. 
+
+\begin{DoxyReturn}{Renvoie}
+Board 
+\end{DoxyReturn}
+
+
+Définition à la ligne 14 du fichier logic.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} i, j;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}} = malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structboard}{Board}}));}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordflow}{for} (i = 0; i < \mbox{\hyperlink{struct_8h_aa6e1cb1e33dd2dba64a1481445155044}{NB\_LIG}}; i++)}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{for} (j = 0; j < \mbox{\hyperlink{struct_8h_a3abe884c18182831cac6f12ecaf06f8b}{NB\_COL}}; j++)}
+\DoxyCodeLine{23         \{}
+\DoxyCodeLine{24             \textcolor{keywordflow}{if} (!(i == 3 \&\& j == 3))}
+\DoxyCodeLine{25             \{}
+\DoxyCodeLine{26                 (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[i][j]).line = i;}
+\DoxyCodeLine{27                 (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[i][j]).column = j;}
+\DoxyCodeLine{28                 (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[i][j]).img = NULL;}
+\DoxyCodeLine{29             \}}
+\DoxyCodeLine{30             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{31             \{}
+\DoxyCodeLine{32                 (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[i][j]).line = -\/1;}
+\DoxyCodeLine{33                 (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[i][j]).column = -\/1;}
+\DoxyCodeLine{34                 (\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[i][j]).img = NULL;}
+\DoxyCodeLine{35             \}}
+\DoxyCodeLine{36         \}}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38     \textcolor{keywordflow}{return} \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}};}
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}
+
+
+Références board\+::bloc, N\+B\+\_\+\+C\+OL, N\+B\+\_\+\+L\+IG, et p.
+
+
+
+Référencé par create\+\_\+window().
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 7
+\mbox{\Hypertarget{logic_8h_a725476abc9735c8ad148677fad2c1b90}\label{logic_8h_a725476abc9735c8ad148677fad2c1b90}} 
+\index{logic.h@{logic.h}!move\_case@{move\_case}}
+\index{move\_case@{move\_case}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{move\_case()}{move\_case()}}
+{\footnotesize\ttfamily void move\+\_\+case (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Gère le déplacement des cases du plateau. 
+
+
+
+Définition à la ligne 140 du fichier logic.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141 \{}
+\DoxyCodeLine{142     \mbox{\hyperlink{structcarre}{Carre}} carre\_click = \mbox{\hyperlink{logic_8c_a2c767434c92ade574b5f6a37f27c35a5}{get\_position\_carre\_click}}(x, y);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     \mbox{\hyperlink{logic_8c_ab61017a7ba5769c53742ab1e79ac31ba}{chek\_if\_carre\_click\_is\_around\_black\_carre\_and\_swap}}(carre\_click);}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146     MLV\_clear\_window(MLV\_COLOR\_BLACK);}
+\DoxyCodeLine{147     \mbox{\hyperlink{frame_8c_a151f4c66589944d167b894b1b03493b2}{draw\_image}}();}
+\DoxyCodeLine{148 \}}
+
+\end{DoxyCode}
+
+
+Références chek\+\_\+if\+\_\+carre\+\_\+click\+\_\+is\+\_\+around\+\_\+black\+\_\+carre\+\_\+and\+\_\+swap(), draw\+\_\+image(), et get\+\_\+position\+\_\+carre\+\_\+click().
+
+
+
+Référencé par main().
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 8
+Voici le graphe des appelants de cette fonction \+:
+% FIG 9
+\mbox{\Hypertarget{logic_8h_a1905fe84eb39f020b32c58baf7a76758}\label{logic_8h_a1905fe84eb39f020b32c58baf7a76758}} 
+\index{logic.h@{logic.h}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{shuffle()}{shuffle()}}
+{\footnotesize\ttfamily void shuffle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mélange le plateau de jeu. 
+
+
+
+Définition à la ligne 61 du fichier logic.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{62 \{}
+\DoxyCodeLine{63     \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{64     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 1000; i++)}
+\DoxyCodeLine{65     \{}
+\DoxyCodeLine{66         x = rand() \% 4;}
+\DoxyCodeLine{67         y = rand() \% 4;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         \mbox{\hyperlink{logic_8c_ab61017a7ba5769c53742ab1e79ac31ba}{chek\_if\_carre\_click\_is\_around\_black\_carre\_and\_swap}}(\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[x][y]);}
+\DoxyCodeLine{70     \}}
+\DoxyCodeLine{71 \}}
+
+\end{DoxyCode}
+
+
+Références board\+::bloc, chek\+\_\+if\+\_\+carre\+\_\+click\+\_\+is\+\_\+around\+\_\+black\+\_\+carre\+\_\+and\+\_\+swap(), et p.
+
+
+
+Référencé par create\+\_\+window().
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 10
+Voici le graphe des appelants de cette fonction \+:
+% FIG 11
+\mbox{\Hypertarget{logic_8h_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287}\label{logic_8h_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287}} 
+\index{logic.h@{logic.h}!swap@{swap}}
+\index{swap@{swap}!logic.h@{logic.h}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2 }\end{DoxyParamCaption})}
+
+
+
+Echange deux cases du plateau. 
+
+
+
+Définition à la ligne 77 du fichier logic.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78 \{}
+\DoxyCodeLine{79     \mbox{\hyperlink{structcarre}{Carre}} temp = \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[y1][x1];}
+\DoxyCodeLine{80     \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[y1][x1] = \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[y2][x2];}
+\DoxyCodeLine{81     \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[y2][x2] = temp;}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}
+
+
+Références board\+::bloc, et p.
+
+
+
+Référencé par chek\+\_\+if\+\_\+carre\+\_\+click\+\_\+is\+\_\+around\+\_\+black\+\_\+carre\+\_\+and\+\_\+swap().
+
+Voici le graphe des appelants de cette fonction \+:
+% FIG 12

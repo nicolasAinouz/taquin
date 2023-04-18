@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Taquin: Référence du fichier src/logic.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Taquin
+   </div>
+   <div id="projectbrief">mini projet jeu du taquin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier logic.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;MLV/MLV_all.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="struct_8h_source.html">include/struct.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="frame_8h_source.html">include/frame.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="logic_8h_source.html">include/logic.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de logic.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c__incl.png" border="0" usemap="#src_2logic_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div>
+<p><a href="logic_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a5d0eb215545a8a2d4194831fceb6a3c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#a3c10129367cfae8f208778364a6a928e">Board</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a5d0eb215545a8a2d4194831fceb6a3c5">init_plateau</a> ()</td></tr>
+<tr class="memdesc:a5d0eb215545a8a2d4194831fceb6a3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise le plateau de jeu.  <a href="logic_8c.html#a5d0eb215545a8a2d4194831fceb6a3c5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5d0eb215545a8a2d4194831fceb6a3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4620b517f7b558f19d8bc31c7a0ec19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#aa4620b517f7b558f19d8bc31c7a0ec19">cut_image</a> (MLV_Image *image)</td></tr>
+<tr class="memdesc:aa4620b517f7b558f19d8bc31c7a0ec19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coupe l'image en 16 morceaux et l'assigne à chaque case du plateau.  <a href="logic_8c.html#aa4620b517f7b558f19d8bc31c7a0ec19">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa4620b517f7b558f19d8bc31c7a0ec19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1905fe84eb39f020b32c58baf7a76758"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a1905fe84eb39f020b32c58baf7a76758">shuffle</a> ()</td></tr>
+<tr class="memdesc:a1905fe84eb39f020b32c58baf7a76758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mélange le plateau de jeu.  <a href="logic_8c.html#a1905fe84eb39f020b32c58baf7a76758">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1905fe84eb39f020b32c58baf7a76758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e0a2af6e8a3a5c2ecee4f1ff4a8287"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">swap</a> (int x1, int y1, int x2, int y2)</td></tr>
+<tr class="memdesc:ab5e0a2af6e8a3a5c2ecee4f1ff4a8287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Echange deux cases du plateau.  <a href="logic_8c.html#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab5e0a2af6e8a3a5c2ecee4f1ff4a8287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c767434c92ade574b5f6a37f27c35a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_8h.html#ac68f7ceb26f461247f93909b0d6ef87f">Carre</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a2c767434c92ade574b5f6a37f27c35a5">get_position_carre_click</a> (int x, int y)</td></tr>
+<tr class="memdesc:a2c767434c92ade574b5f6a37f27c35a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la case du plateau sur laquelle l'utilisateur a cliqué en fonction des coordonnées du clic.  <a href="logic_8c.html#a2c767434c92ade574b5f6a37f27c35a5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2c767434c92ade574b5f6a37f27c35a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61017a7ba5769c53742ab1e79ac31ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#ab61017a7ba5769c53742ab1e79ac31ba">chek_if_carre_click_is_around_black_carre_and_swap</a> (<a class="el" href="struct_8h.html#ac68f7ceb26f461247f93909b0d6ef87f">Carre</a> carre_click)</td></tr>
+<tr class="memdesc:ab61017a7ba5769c53742ab1e79ac31ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la case sur laquelle l'utilisateur a cliqué est à côté de la case vide et l'échange si c'est le cas.  <a href="logic_8c.html#ab61017a7ba5769c53742ab1e79ac31ba">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab61017a7ba5769c53742ab1e79ac31ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725476abc9735c8ad148677fad2c1b90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#a725476abc9735c8ad148677fad2c1b90">move_case</a> (int x, int y)</td></tr>
+<tr class="memdesc:a725476abc9735c8ad148677fad2c1b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère le déplacement des cases du plateau.  <a href="logic_8c.html#a725476abc9735c8ad148677fad2c1b90">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a725476abc9735c8ad148677fad2c1b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9360a8f58baa7cfe7598f7b8914e277"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="logic_8c.html#ad9360a8f58baa7cfe7598f7b8914e277">check_if_victory</a> ()</td></tr>
+<tr class="memdesc:ad9360a8f58baa7cfe7598f7b8914e277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si le joueur a gagné.  <a href="logic_8c.html#ad9360a8f58baa7cfe7598f7b8914e277">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad9360a8f58baa7cfe7598f7b8914e277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ad9360a8f58baa7cfe7598f7b8914e277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9360a8f58baa7cfe7598f7b8914e277">&#9670;&nbsp;</a></span>check_if_victory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int check_if_victory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie si le joueur a gagné. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="logic_8c_source.html#l00154">154</a> du fichier <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">int</span> victory = 1;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a>; i++)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a>; j++)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordflow">if</span> (!(j == 3 &amp;&amp; i == 3))</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[i][j].<a class="code" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">line</a> != i || <a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[i][j].<a class="code" href="structcarre.html#a1c5ff9af4a426b4959f4245f33df7c74">column</a> != j)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                    victory = 0;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">return</span> victory;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">board::bloc</a>, <a class="el" href="structcarre.html#a1c5ff9af4a426b4959f4245f33df7c74">carre::column</a>, <a class="el" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">carre::line</a>, <a class="el" href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a>, <a class="el" href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a>, et <a class="el" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="main_8c.html#abf9e6b7e6f15df4b525a2e7705ba3089">main()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_ad9360a8f58baa7cfe7598f7b8914e277_icgraph.png" border="0" usemap="#logic_8c_ad9360a8f58baa7cfe7598f7b8914e277_icgraph" alt=""/></div>
+<!-- MAP 1 -->
+</div>
+
+</div>
+</div>
+<a id="ab61017a7ba5769c53742ab1e79ac31ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61017a7ba5769c53742ab1e79ac31ba">&#9670;&nbsp;</a></span>chek_if_carre_click_is_around_black_carre_and_swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void chek_if_carre_click_is_around_black_carre_and_swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_8h.html#ac68f7ceb26f461247f93909b0d6ef87f">Carre</a>&#160;</td>
+          <td class="paramname"><em>carre_click</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie si la case sur laquelle l'utilisateur a cliqué est à côté de la case vide et l'échange si c'est le cas. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="logic_8c_source.html#l00100">100</a> du fichier <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a>; i++)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a>; j++)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[j][i].<a class="code" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">line</a> == carre_click.<a class="code" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">line</a> &amp;&amp; <a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[j][i].<a class="code" href="structcarre.html#a1c5ff9af4a426b4959f4245f33df7c74">column</a> == carre_click.<a class="code" href="structcarre.html#a1c5ff9af4a426b4959f4245f33df7c74">column</a>)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[j][i + 1].<a class="code" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">line</a> == -1)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                    <a class="code" href="logic_8c.html#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">swap</a>(i, j, i + 1, j);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                }</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[j][i - 1].<a class="code" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">line</a> == -1)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    <a class="code" href="logic_8c.html#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">swap</a>(i, j, i - 1, j);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[j + 1][i].<a class="code" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">line</a> == -1)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    <a class="code" href="logic_8c.html#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">swap</a>(i, j, i, j + 1);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[j - 1][i].<a class="code" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">line</a> == -1)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    <a class="code" href="logic_8c.html#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">swap</a>(i, j, i, j - 1);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">board::bloc</a>, <a class="el" href="structcarre.html#a1c5ff9af4a426b4959f4245f33df7c74">carre::column</a>, <a class="el" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">carre::line</a>, <a class="el" href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a>, <a class="el" href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a>, <a class="el" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>, et <a class="el" href="logic_8c.html#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">swap()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="logic_8c.html#a725476abc9735c8ad148677fad2c1b90">move_case()</a>, et <a class="el" href="logic_8c.html#a1905fe84eb39f020b32c58baf7a76758">shuffle()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_ab61017a7ba5769c53742ab1e79ac31ba_cgraph.png" border="0" usemap="#logic_8c_ab61017a7ba5769c53742ab1e79ac31ba_cgraph" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_ab61017a7ba5769c53742ab1e79ac31ba_icgraph.png" border="0" usemap="#logic_8c_ab61017a7ba5769c53742ab1e79ac31ba_icgraph" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="aa4620b517f7b558f19d8bc31c7a0ec19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4620b517f7b558f19d8bc31c7a0ec19">&#9670;&nbsp;</a></span>cut_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cut_image </td>
+          <td>(</td>
+          <td class="paramtype">MLV_Image *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Coupe l'image en 16 morceaux et l'assigne à chaque case du plateau. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="logic_8c_source.html#l00046">46</a> du fichier <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a>; i++)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a>; j++)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            ((<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>)[i][j]).img = MLV_copy_partial_image(image, j * <a class="code" href="struct_8h.html#a2a94d2f61c849b4aeed9684aae52c8c1">SIZE_CASE</a>, i * <a class="code" href="struct_8h.html#a2a94d2f61c849b4aeed9684aae52c8c1">SIZE_CASE</a>, <a class="code" href="struct_8h.html#a2a94d2f61c849b4aeed9684aae52c8c1">SIZE_CASE</a>, <a class="code" href="struct_8h.html#a2a94d2f61c849b4aeed9684aae52c8c1">SIZE_CASE</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">board::bloc</a>, <a class="el" href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a>, <a class="el" href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a>, <a class="el" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>, et <a class="el" href="struct_8h.html#a2a94d2f61c849b4aeed9684aae52c8c1">SIZE_CASE</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="frame_8h.html#adbf4a23b001075b18efb14b900bce769">create_window()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_aa4620b517f7b558f19d8bc31c7a0ec19_icgraph.png" border="0" usemap="#logic_8c_aa4620b517f7b558f19d8bc31c7a0ec19_icgraph" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a2c767434c92ade574b5f6a37f27c35a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c767434c92ade574b5f6a37f27c35a5">&#9670;&nbsp;</a></span>get_position_carre_click()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#ac68f7ceb26f461247f93909b0d6ef87f">Carre</a> get_position_carre_click </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne la case du plateau sur laquelle l'utilisateur a cliqué en fonction des coordonnées du clic. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="logic_8c_source.html#l00088">88</a> du fichier <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    x = x / (<a class="code" href="struct_8h.html#a2a94d2f61c849b4aeed9684aae52c8c1">SIZE_CASE</a> + <a class="code" href="struct_8h.html#ae266d6533efcea2d0fdc2f48ce895207">SPACE_BETWEEN_CASE</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    y = y / (<a class="code" href="struct_8h.html#a2a94d2f61c849b4aeed9684aae52c8c1">SIZE_CASE</a> + <a class="code" href="struct_8h.html#ae266d6533efcea2d0fdc2f48ce895207">SPACE_BETWEEN_CASE</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[y][x];</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">board::bloc</a>, <a class="el" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>, <a class="el" href="struct_8h.html#a2a94d2f61c849b4aeed9684aae52c8c1">SIZE_CASE</a>, et <a class="el" href="struct_8h.html#ae266d6533efcea2d0fdc2f48ce895207">SPACE_BETWEEN_CASE</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="logic_8c.html#a725476abc9735c8ad148677fad2c1b90">move_case()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a2c767434c92ade574b5f6a37f27c35a5_icgraph.png" border="0" usemap="#logic_8c_a2c767434c92ade574b5f6a37f27c35a5_icgraph" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a5d0eb215545a8a2d4194831fceb6a3c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d0eb215545a8a2d4194831fceb6a3c5">&#9670;&nbsp;</a></span>init_plateau()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_8h.html#a3c10129367cfae8f208778364a6a928e">Board</a>* init_plateau </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise le plateau de jeu. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Board </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="logic_8c_source.html#l00014">14</a> du fichier <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a> = malloc(<span class="keyword">sizeof</span>(<a class="code" href="structboard.html">Board</a>));</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; <a class="code" href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a>; i++)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">for</span> (j = 0; j &lt; <a class="code" href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a>; j++)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">if</span> (!(i == 3 &amp;&amp; j == 3))</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[i][j]).line = i;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[i][j]).column = j;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[i][j]).img = NULL;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[i][j]).line = -1;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[i][j]).column = -1;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                (<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[i][j]).img = NULL;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">board::bloc</a>, <a class="el" href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a>, <a class="el" href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a>, et <a class="el" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="frame_8h.html#adbf4a23b001075b18efb14b900bce769">create_window()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a5d0eb215545a8a2d4194831fceb6a3c5_icgraph.png" border="0" usemap="#logic_8c_a5d0eb215545a8a2d4194831fceb6a3c5_icgraph" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="a725476abc9735c8ad148677fad2c1b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725476abc9735c8ad148677fad2c1b90">&#9670;&nbsp;</a></span>move_case()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void move_case </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gère le déplacement des cases du plateau. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="logic_8c_source.html#l00140">140</a> du fichier <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="structcarre.html">Carre</a> carre_click = <a class="code" href="logic_8c.html#a2c767434c92ade574b5f6a37f27c35a5">get_position_carre_click</a>(x, y);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="logic_8c.html#ab61017a7ba5769c53742ab1e79ac31ba">chek_if_carre_click_is_around_black_carre_and_swap</a>(carre_click);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    MLV_clear_window(MLV_COLOR_BLACK);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="frame_8c.html#a151f4c66589944d167b894b1b03493b2">draw_image</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="logic_8c.html#ab61017a7ba5769c53742ab1e79ac31ba">chek_if_carre_click_is_around_black_carre_and_swap()</a>, <a class="el" href="frame_8c.html#a151f4c66589944d167b894b1b03493b2">draw_image()</a>, et <a class="el" href="logic_8c.html#a2c767434c92ade574b5f6a37f27c35a5">get_position_carre_click()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="main_8c.html#abf9e6b7e6f15df4b525a2e7705ba3089">main()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a725476abc9735c8ad148677fad2c1b90_cgraph.png" border="0" usemap="#logic_8c_a725476abc9735c8ad148677fad2c1b90_cgraph" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a725476abc9735c8ad148677fad2c1b90_icgraph.png" border="0" usemap="#logic_8c_a725476abc9735c8ad148677fad2c1b90_icgraph" alt=""/></div>
+<!-- MAP 8 -->
+</div>
+
+</div>
+</div>
+<a id="a1905fe84eb39f020b32c58baf7a76758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1905fe84eb39f020b32c58baf7a76758">&#9670;&nbsp;</a></span>shuffle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shuffle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mélange le plateau de jeu. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="logic_8c_source.html#l00061">61</a> du fichier <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> x, y;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 1000; i++)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        x = rand() % 4;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        y = rand() % 4;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="logic_8c.html#ab61017a7ba5769c53742ab1e79ac31ba">chek_if_carre_click_is_around_black_carre_and_swap</a>(<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[x][y]);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">board::bloc</a>, <a class="el" href="logic_8c.html#ab61017a7ba5769c53742ab1e79ac31ba">chek_if_carre_click_is_around_black_carre_and_swap()</a>, et <a class="el" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="frame_8h.html#adbf4a23b001075b18efb14b900bce769">create_window()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a1905fe84eb39f020b32c58baf7a76758_cgraph.png" border="0" usemap="#logic_8c_a1905fe84eb39f020b32c58baf7a76758_cgraph" alt=""/></div>
+<!-- MAP 9 -->
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_a1905fe84eb39f020b32c58baf7a76758_icgraph.png" border="0" usemap="#logic_8c_a1905fe84eb39f020b32c58baf7a76758_icgraph" alt=""/></div>
+<!-- MAP 10 -->
+</div>
+
+</div>
+</div>
+<a id="ab5e0a2af6e8a3a5c2ecee4f1ff4a8287"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">&#9670;&nbsp;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void swap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Echange deux cases du plateau. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="logic_8c_source.html#l00077">77</a> du fichier <a class="el" href="logic_8c_source.html">logic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="structcarre.html">Carre</a> temp = <a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[y1][x1];</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[y1][x1] = <a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[y2][x2];</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>-&gt;<a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[y2][x2] = temp;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">board::bloc</a>, et <a class="el" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="logic_8c.html#ab61017a7ba5769c53742ab1e79ac31ba">chek_if_carre_click_is_around_black_carre_and_swap()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="logic_8c_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287_icgraph.png" border="0" usemap="#logic_8c_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287_icgraph" alt=""/></div>
+<!-- MAP 11 -->
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="alogic_8c_html_a2c767434c92ade574b5f6a37f27c35a5"><div class="ttname"><a href="logic_8c.html#a2c767434c92ade574b5f6a37f27c35a5">get_position_carre_click</a></div><div class="ttdeci">Carre get_position_carre_click(int x, int y)</div><div class="ttdoc">Retourne la case du plateau sur laquelle l'utilisateur a cliqué en fonction des coordonnées du clic.</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00088">logic.c:88</a></div></div>
+<div class="ttc" id="astructcarre_html"><div class="ttname"><a href="structcarre.html">carre</a></div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00013">struct.h:13</a></div></div>
+<div class="ttc" id="aframe_8c_html_a151f4c66589944d167b894b1b03493b2"><div class="ttname"><a href="frame_8c.html#a151f4c66589944d167b894b1b03493b2">draw_image</a></div><div class="ttdeci">void draw_image()</div><div class="ttdoc">Dessine contenu dans chaque case du plateau.</div><div class="ttdef"><b>Definition:</b> <a href="frame_8c_source.html#l00022">frame.c:22</a></div></div>
+<div class="ttc" id="astructboard_html"><div class="ttname"><a href="structboard.html">board</a></div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00020">struct.h:20</a></div></div>
+<div class="ttc" id="astruct_8h_html_aa6e1cb1e33dd2dba64a1481445155044"><div class="ttname"><a href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a></div><div class="ttdeci">#define NB_LIG</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00007">struct.h:7</a></div></div>
+<div class="ttc" id="alogic_8c_html_ab61017a7ba5769c53742ab1e79ac31ba"><div class="ttname"><a href="logic_8c.html#ab61017a7ba5769c53742ab1e79ac31ba">chek_if_carre_click_is_around_black_carre_and_swap</a></div><div class="ttdeci">void chek_if_carre_click_is_around_black_carre_and_swap(Carre carre_click)</div><div class="ttdoc">Vérifie si la case sur laquelle l'utilisateur a cliqué est à côté de la case vide et l'échange si c'e...</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00100">logic.c:100</a></div></div>
+<div class="ttc" id="alogic_8c_html_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287"><div class="ttname"><a href="logic_8c.html#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">swap</a></div><div class="ttdeci">void swap(int x1, int y1, int x2, int y2)</div><div class="ttdoc">Echange deux cases du plateau.</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00077">logic.c:77</a></div></div>
+<div class="ttc" id="astruct_8h_html_a3abe884c18182831cac6f12ecaf06f8b"><div class="ttname"><a href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a></div><div class="ttdeci">#define NB_COL</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00006">struct.h:6</a></div></div>
+<div class="ttc" id="astructboard_html_a4800b7da46b8e67c74cb978aaab8c45e"><div class="ttname"><a href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">board::bloc</a></div><div class="ttdeci">Carre bloc[NB_LIG][NB_COL]</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00022">struct.h:22</a></div></div>
+<div class="ttc" id="astruct_8h_html_ae266d6533efcea2d0fdc2f48ce895207"><div class="ttname"><a href="struct_8h.html#ae266d6533efcea2d0fdc2f48ce895207">SPACE_BETWEEN_CASE</a></div><div class="ttdeci">#define SPACE_BETWEEN_CASE</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00011">struct.h:11</a></div></div>
+<div class="ttc" id="astructcarre_html_a1c5ff9af4a426b4959f4245f33df7c74"><div class="ttname"><a href="structcarre.html#a1c5ff9af4a426b4959f4245f33df7c74">carre::column</a></div><div class="ttdeci">int column</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00016">struct.h:16</a></div></div>
+<div class="ttc" id="astruct_8h_html_a266661011974bab829c073976079e607"><div class="ttname"><a href="struct_8h.html#a266661011974bab829c073976079e607">p</a></div><div class="ttdeci">Board * p</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00026">struct.h:26</a></div></div>
+<div class="ttc" id="astruct_8h_html_a2a94d2f61c849b4aeed9684aae52c8c1"><div class="ttname"><a href="struct_8h.html#a2a94d2f61c849b4aeed9684aae52c8c1">SIZE_CASE</a></div><div class="ttdeci">#define SIZE_CASE</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00010">struct.h:10</a></div></div>
+<div class="ttc" id="astructcarre_html_a0c3fa6a47c7ce3622d1ebfac9d89f0a6"><div class="ttname"><a href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">carre::line</a></div><div class="ttdeci">int line</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00015">struct.h:15</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,63 @@
+\hypertarget{main_8c}{}\doxysection{Référence du fichier src/main.c}
+\label{main_8c}\index{src/main.c@{src/main.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$M\+L\+V/\+M\+L\+V\+\_\+all.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}include/struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/logic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/frame.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de main.\+c\+:
+% FIG 0
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction principale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{main_8c_abf9e6b7e6f15df4b525a2e7705ba3089}\label{main_8c_abf9e6b7e6f15df4b525a2e7705ba3089}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fonction principale. 
+
+
+
+Définition à la ligne 12 du fichier main.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \mbox{\hyperlink{frame_8c_adbf4a23b001075b18efb14b900bce769}{create\_window}}();}
+\DoxyCodeLine{15     MLV\_actualise\_window();}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} clic\_x = 0;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} clic\_y = 0;}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} quit = 0;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordflow}{while} (quit == 0)}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         MLV\_wait\_keyboard\_or\_mouse(NULL, NULL, NULL, \&clic\_x, \&clic\_y);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24         \mbox{\hyperlink{logic_8h_a725476abc9735c8ad148677fad2c1b90}{move\_case}}(clic\_x, clic\_y);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         MLV\_actualise\_window();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28         quit = \mbox{\hyperlink{logic_8h_ad9360a8f58baa7cfe7598f7b8914e277}{check\_if\_victory}}();}
+\DoxyCodeLine{29     \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \mbox{\hyperlink{frame_8c_a293d91aefc466948bca9681192cbb5a4}{print\_victory}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{34 \}}
+
+\end{DoxyCode}
+
+
+Références check\+\_\+if\+\_\+victory(), create\+\_\+window(), move\+\_\+case(), et print\+\_\+victory().
+
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
+% FIG 1

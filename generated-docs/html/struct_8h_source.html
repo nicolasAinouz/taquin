@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Taquin:  Fichier source de src/include/struct.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Taquin
+   </div>
+   <div id="projectbrief">mini projet jeu du taquin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">struct.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="struct_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __STRUCT__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __STRUCT__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;MLV/MLV_all.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">    6</a></span>&#160;<span class="preprocessor">#define NB_COL 4</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">    7</a></span>&#160;<span class="preprocessor">#define NB_LIG 4</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="struct_8h.html#a241aeeb764887ae5e3de58b98f04b16d">    8</a></span>&#160;<span class="preprocessor">#define WIDTH 512</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="struct_8h.html#aed89bd71aee8be823e8a20ec4e093c1e">    9</a></span>&#160;<span class="preprocessor">#define HEIGHT 512</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_8h.html#a2a94d2f61c849b4aeed9684aae52c8c1">   10</a></span>&#160;<span class="preprocessor">#define SIZE_CASE 128</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_8h.html#ae266d6533efcea2d0fdc2f48ce895207">   11</a></span>&#160;<span class="preprocessor">#define SPACE_BETWEEN_CASE 2</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structcarre.html">   13</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structcarre.html">carre</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">   15</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">line</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structcarre.html#a1c5ff9af4a426b4959f4245f33df7c74">   16</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structcarre.html#a1c5ff9af4a426b4959f4245f33df7c74">column</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structcarre.html#a42c7ecd4731a3f416fa3040f24553f4b">   17</a></span>&#160;    MLV_Image *<a class="code" href="structcarre.html#a42c7ecd4731a3f416fa3040f24553f4b">img</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;} <a class="code" href="struct_8h.html#ac68f7ceb26f461247f93909b0d6ef87f">Carre</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structboard.html">   20</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structboard.html">board</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">   22</a></span>&#160;    <a class="code" href="structcarre.html">Carre</a> <a class="code" href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">bloc</a>[<a class="code" href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a>][<a class="code" href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a>];</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <a class="code" href="struct_8h.html#a3c10129367cfae8f208778364a6a928e">Board</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_8h.html#a266661011974bab829c073976079e607">   26</a></span>&#160;<a class="code" href="structboard.html">Board</a> *<a class="code" href="struct_8h.html#a266661011974bab829c073976079e607">p</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructcarre_html"><div class="ttname"><a href="structcarre.html">carre</a></div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00013">struct.h:13</a></div></div>
+<div class="ttc" id="astructboard_html"><div class="ttname"><a href="structboard.html">board</a></div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00020">struct.h:20</a></div></div>
+<div class="ttc" id="astruct_8h_html_aa6e1cb1e33dd2dba64a1481445155044"><div class="ttname"><a href="struct_8h.html#aa6e1cb1e33dd2dba64a1481445155044">NB_LIG</a></div><div class="ttdeci">#define NB_LIG</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00007">struct.h:7</a></div></div>
+<div class="ttc" id="astructcarre_html_a42c7ecd4731a3f416fa3040f24553f4b"><div class="ttname"><a href="structcarre.html#a42c7ecd4731a3f416fa3040f24553f4b">carre::img</a></div><div class="ttdeci">MLV_Image * img</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00017">struct.h:17</a></div></div>
+<div class="ttc" id="astruct_8h_html_a3c10129367cfae8f208778364a6a928e"><div class="ttname"><a href="struct_8h.html#a3c10129367cfae8f208778364a6a928e">Board</a></div><div class="ttdeci">struct board Board</div></div>
+<div class="ttc" id="astruct_8h_html_a3abe884c18182831cac6f12ecaf06f8b"><div class="ttname"><a href="struct_8h.html#a3abe884c18182831cac6f12ecaf06f8b">NB_COL</a></div><div class="ttdeci">#define NB_COL</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00006">struct.h:6</a></div></div>
+<div class="ttc" id="astructboard_html_a4800b7da46b8e67c74cb978aaab8c45e"><div class="ttname"><a href="structboard.html#a4800b7da46b8e67c74cb978aaab8c45e">board::bloc</a></div><div class="ttdeci">Carre bloc[NB_LIG][NB_COL]</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00022">struct.h:22</a></div></div>
+<div class="ttc" id="astructcarre_html_a1c5ff9af4a426b4959f4245f33df7c74"><div class="ttname"><a href="structcarre.html#a1c5ff9af4a426b4959f4245f33df7c74">carre::column</a></div><div class="ttdeci">int column</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00016">struct.h:16</a></div></div>
+<div class="ttc" id="astruct_8h_html_a266661011974bab829c073976079e607"><div class="ttname"><a href="struct_8h.html#a266661011974bab829c073976079e607">p</a></div><div class="ttdeci">Board * p</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00026">struct.h:26</a></div></div>
+<div class="ttc" id="astruct_8h_html_ac68f7ceb26f461247f93909b0d6ef87f"><div class="ttname"><a href="struct_8h.html#ac68f7ceb26f461247f93909b0d6ef87f">Carre</a></div><div class="ttdeci">struct carre Carre</div></div>
+<div class="ttc" id="astructcarre_html_a0c3fa6a47c7ce3622d1ebfac9d89f0a6"><div class="ttname"><a href="structcarre.html#a0c3fa6a47c7ce3622d1ebfac9d89f0a6">carre::line</a></div><div class="ttdeci">int line</div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00015">struct.h:15</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

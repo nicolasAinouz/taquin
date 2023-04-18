@@ -1,0 +1,5 @@
+Ce projet Taquin a été séparé en deux fichiers séparants la logique du jeu de l'affichage. 
+
+Tout d'abord, mon programme est centré autour du fichier struct.h contentant les structures de données utilisées dans le programme ainsi que le plateau utilisé "Board *p". J'ai choisis de conserver la structure proposée par le sujet, cependant j'ai ajouté à ma structure square une image. Je stock chaque bout d'image correspondant à chaque case au sein de ma structure, c'est plus facile pour les ressortirs.
+
+J'ai construit ce projet avec la case vide qui à pour valeur ligne et colonne -1 comme conseillé. C'est une manière de faire que à laquelle je n'avais pas pensé, mais qui m'a grandement facilité la mise en place de ce projet.  

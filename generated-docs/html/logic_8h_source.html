@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Taquin:  Fichier source de src/include/logic.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Taquin
+   </div>
+   <div id="projectbrief">mini projet jeu du taquin</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">logic.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="logic_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _LOGIC_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _LOGIC_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="struct_8h.html">struct.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<a class="code" href="structboard.html">Board</a> *<a class="code" href="logic_8h.html#a5d0eb215545a8a2d4194831fceb6a3c5">init_plateau</a>();</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logic_8h.html#aa4620b517f7b558f19d8bc31c7a0ec19">cut_image</a>(MLV_Image *image);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logic_8h.html#a1905fe84eb39f020b32c58baf7a76758">shuffle</a>();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logic_8h.html#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">swap</a>(<span class="keywordtype">int</span> x1, <span class="keywordtype">int</span> y1, <span class="keywordtype">int</span> x2, <span class="keywordtype">int</span> y2);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<a class="code" href="structcarre.html">Carre</a> <a class="code" href="logic_8h.html#a2c767434c92ade574b5f6a37f27c35a5">get_position_carre_click</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logic_8h.html#ab61017a7ba5769c53742ab1e79ac31ba">chek_if_carre_click_is_around_black_carre_and_swap</a>(<a class="code" href="structcarre.html">Carre</a> carre_click);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="logic_8h.html#a725476abc9735c8ad148677fad2c1b90">move_case</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">int</span> <a class="code" href="logic_8h.html#ad9360a8f58baa7cfe7598f7b8914e277">check_if_victory</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="alogic_8h_html_a725476abc9735c8ad148677fad2c1b90"><div class="ttname"><a href="logic_8h.html#a725476abc9735c8ad148677fad2c1b90">move_case</a></div><div class="ttdeci">void move_case(int x, int y)</div><div class="ttdoc">Gère le déplacement des cases du plateau.</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00140">logic.c:140</a></div></div>
+<div class="ttc" id="astructcarre_html"><div class="ttname"><a href="structcarre.html">carre</a></div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00013">struct.h:13</a></div></div>
+<div class="ttc" id="alogic_8h_html_ad9360a8f58baa7cfe7598f7b8914e277"><div class="ttname"><a href="logic_8h.html#ad9360a8f58baa7cfe7598f7b8914e277">check_if_victory</a></div><div class="ttdeci">int check_if_victory()</div><div class="ttdoc">Vérifie si le joueur a gagné.</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00154">logic.c:154</a></div></div>
+<div class="ttc" id="alogic_8h_html_aa4620b517f7b558f19d8bc31c7a0ec19"><div class="ttname"><a href="logic_8h.html#aa4620b517f7b558f19d8bc31c7a0ec19">cut_image</a></div><div class="ttdeci">void cut_image(MLV_Image *image)</div><div class="ttdoc">Coupe l'image en 16 morceaux et l'assigne à chaque case du plateau.</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00046">logic.c:46</a></div></div>
+<div class="ttc" id="astructboard_html"><div class="ttname"><a href="structboard.html">board</a></div><div class="ttdef"><b>Definition:</b> <a href="struct_8h_source.html#l00020">struct.h:20</a></div></div>
+<div class="ttc" id="alogic_8h_html_ab61017a7ba5769c53742ab1e79ac31ba"><div class="ttname"><a href="logic_8h.html#ab61017a7ba5769c53742ab1e79ac31ba">chek_if_carre_click_is_around_black_carre_and_swap</a></div><div class="ttdeci">void chek_if_carre_click_is_around_black_carre_and_swap(Carre carre_click)</div><div class="ttdoc">Vérifie si la case sur laquelle l'utilisateur a cliqué est à côté de la case vide et l'échange si c'e...</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00100">logic.c:100</a></div></div>
+<div class="ttc" id="alogic_8h_html_a1905fe84eb39f020b32c58baf7a76758"><div class="ttname"><a href="logic_8h.html#a1905fe84eb39f020b32c58baf7a76758">shuffle</a></div><div class="ttdeci">void shuffle()</div><div class="ttdoc">Mélange le plateau de jeu.</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00061">logic.c:61</a></div></div>
+<div class="ttc" id="alogic_8h_html_a2c767434c92ade574b5f6a37f27c35a5"><div class="ttname"><a href="logic_8h.html#a2c767434c92ade574b5f6a37f27c35a5">get_position_carre_click</a></div><div class="ttdeci">Carre get_position_carre_click(int x, int y)</div><div class="ttdoc">Retourne la case du plateau sur laquelle l'utilisateur a cliqué en fonction des coordonnées du clic.</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00088">logic.c:88</a></div></div>
+<div class="ttc" id="alogic_8h_html_a5d0eb215545a8a2d4194831fceb6a3c5"><div class="ttname"><a href="logic_8h.html#a5d0eb215545a8a2d4194831fceb6a3c5">init_plateau</a></div><div class="ttdeci">Board * init_plateau()</div><div class="ttdoc">Initialise le plateau de jeu.</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00014">logic.c:14</a></div></div>
+<div class="ttc" id="alogic_8h_html_ab5e0a2af6e8a3a5c2ecee4f1ff4a8287"><div class="ttname"><a href="logic_8h.html#ab5e0a2af6e8a3a5c2ecee4f1ff4a8287">swap</a></div><div class="ttdeci">void swap(int x1, int y1, int x2, int y2)</div><div class="ttdoc">Echange deux cases du plateau.</div><div class="ttdef"><b>Definition:</b> <a href="logic_8c_source.html#l00077">logic.c:77</a></div></div>
+<div class="ttc" id="astruct_8h_html"><div class="ttname"><a href="struct_8h.html">struct.h</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
