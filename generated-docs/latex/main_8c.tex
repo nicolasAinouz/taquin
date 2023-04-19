@@ -1,5 +1,10 @@
 \hypertarget{main_8c}{}\doxysection{Référence du fichier src/main.c}
 \label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+Fichier de lancement du jeu.  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$M\+L\+V/\+M\+L\+V\+\_\+all.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}include/struct.\+h\char`\"{}}\newline
@@ -11,7 +16,24 @@ Graphe des dépendances par inclusion de main.\+c\+:
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{main_8c_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
-\begin{DoxyCompactList}\small\item\em Fonction principale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Fichier de lancement du jeu. 
+
+\begin{DoxyAuthor}{Auteur}
+Nicolas Ainouz 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/04-\/19
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
 
 
 \doxysubsection{Documentation des fonctions}
@@ -22,42 +44,53 @@ int \mbox{\hyperlink{main_8c_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
 
+\begin{DoxyParams}{Paramètres}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
 
-Fonction principale. 
 
-
-
-Définition à la ligne 12 du fichier main.\+c.
+Définition à la ligne 25 du fichier main.\+c.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{13 \{}
-\DoxyCodeLine{14     \mbox{\hyperlink{frame_8c_adbf4a23b001075b18efb14b900bce769}{create\_window}}();}
-\DoxyCodeLine{15     MLV\_actualise\_window();}
-\DoxyCodeLine{16     \textcolor{keywordtype}{int} clic\_x = 0;}
-\DoxyCodeLine{17     \textcolor{keywordtype}{int} clic\_y = 0;}
-\DoxyCodeLine{18     \textcolor{keywordtype}{int} quit = 0;}
-\DoxyCodeLine{19 }
-\DoxyCodeLine{20     \textcolor{keywordflow}{while} (quit == 0)}
-\DoxyCodeLine{21     \{}
-\DoxyCodeLine{22         MLV\_wait\_keyboard\_or\_mouse(NULL, NULL, NULL, \&clic\_x, \&clic\_y);}
-\DoxyCodeLine{23 }
-\DoxyCodeLine{24         \mbox{\hyperlink{logic_8h_a725476abc9735c8ad148677fad2c1b90}{move\_case}}(clic\_x, clic\_y);}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26         MLV\_actualise\_window();}
-\DoxyCodeLine{27 }
-\DoxyCodeLine{28         quit = \mbox{\hyperlink{logic_8h_ad9360a8f58baa7cfe7598f7b8914e277}{check\_if\_victory}}();}
-\DoxyCodeLine{29     \}}
-\DoxyCodeLine{30 }
-\DoxyCodeLine{31     \mbox{\hyperlink{frame_8c_a293d91aefc466948bca9681192cbb5a4}{print\_victory}}();}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33     \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{34 \}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \mbox{\hyperlink{structboard}{Board}} p;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{logic_8h_a841544bff0ed867aaa1568531aaa8e1f}{init\_plateau}}(\&p);}
+\DoxyCodeLine{30     \mbox{\hyperlink{frame_8c_a87931ee18c1edf9c7b0e1176f8c8d2ec}{create\_window}}(\&p);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     MLV\_actualise\_window();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} clic\_x = 0;}
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} clic\_y = 0;}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} quit = 0;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordflow}{while} (quit == 0)}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40         MLV\_wait\_keyboard\_or\_mouse(NULL, NULL, NULL, \&clic\_x, \&clic\_y);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \mbox{\hyperlink{logic_8h_aac70284481908daf7d17c47b48da3313}{move\_case}}(clic\_x, clic\_y, \&p);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         MLV\_actualise\_window();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         quit = \mbox{\hyperlink{logic_8h_af0492c59953c3e02792d7784a7d731c5}{check\_if\_victory}}(\&p);}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \mbox{\hyperlink{frame_8c_a5d55b0244736ab412ac40723a6fe4af1}{print\_victory}}(\&p);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{52 \}}
 
 \end{DoxyCode}
 
 
-Références check\+\_\+if\+\_\+victory(), create\+\_\+window(), move\+\_\+case(), et print\+\_\+victory().
+Références check\+\_\+if\+\_\+victory(), create\+\_\+window(), init\+\_\+plateau(), move\+\_\+case(), et print\+\_\+victory().
 
 Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
 % FIG 1

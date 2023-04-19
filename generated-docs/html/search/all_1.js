@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['carre_2',['carre',['../structcarre.html',1,'carre'],['../struct_8h.html#ac68f7ceb26f461247f93909b0d6ef87f',1,'Carre():&#160;struct.h']]],
-  ['check_5fif_5fvictory_3',['check_if_victory',['../logic_8h.html#ad9360a8f58baa7cfe7598f7b8914e277',1,'check_if_victory():&#160;logic.c'],['../logic_8c.html#ad9360a8f58baa7cfe7598f7b8914e277',1,'check_if_victory():&#160;logic.c']]],
-  ['chek_5fif_5fcarre_5fclick_5fis_5faround_5fblack_5fcarre_5fand_5fswap_4',['chek_if_carre_click_is_around_black_carre_and_swap',['../logic_8h.html#ab61017a7ba5769c53742ab1e79ac31ba',1,'chek_if_carre_click_is_around_black_carre_and_swap(Carre carre_click):&#160;logic.c'],['../logic_8c.html#ab61017a7ba5769c53742ab1e79ac31ba',1,'chek_if_carre_click_is_around_black_carre_and_swap(Carre carre_click):&#160;logic.c']]],
-  ['column_5',['column',['../structcarre.html#a1c5ff9af4a426b4959f4245f33df7c74',1,'carre']]],
-  ['create_5fwindow_6',['create_window',['../frame_8c.html#adbf4a23b001075b18efb14b900bce769',1,'create_window():&#160;frame.c'],['../frame_8h.html#adbf4a23b001075b18efb14b900bce769',1,'create_window():&#160;frame.c']]],
-  ['cut_5fimage_7',['cut_image',['../logic_8h.html#aa4620b517f7b558f19d8bc31c7a0ec19',1,'cut_image(MLV_Image *image):&#160;logic.c'],['../logic_8c.html#aa4620b517f7b558f19d8bc31c7a0ec19',1,'cut_image(MLV_Image *image):&#160;logic.c']]]
+  ['check_5fif_5fvictory_2',['check_if_victory',['../logic_8h.html#af0492c59953c3e02792d7784a7d731c5',1,'check_if_victory(Board *p):&#160;logic.c'],['../logic_8c.html#af0492c59953c3e02792d7784a7d731c5',1,'check_if_victory(Board *p):&#160;logic.c']]],
+  ['chek_5fif_5fsquare_5fclick_5fis_5faround_5fblack_5fsquare_5fand_5fswap_3',['chek_if_square_click_is_around_black_square_and_swap',['../logic_8h.html#ad00023104cac1f36456c1c60727968f1',1,'chek_if_square_click_is_around_black_square_and_swap(Square square_click, Board *p):&#160;logic.c'],['../logic_8c.html#ad00023104cac1f36456c1c60727968f1',1,'chek_if_square_click_is_around_black_square_and_swap(Square square_click, Board *p):&#160;logic.c']]],
+  ['column_4',['column',['../structsquare.html#ae19c80d8529b6a9d7d0755067e07e5a1',1,'square']]],
+  ['create_5fwindow_5',['create_window',['../frame_8c.html#a87931ee18c1edf9c7b0e1176f8c8d2ec',1,'create_window(Board *p):&#160;frame.c'],['../frame_8h.html#a87931ee18c1edf9c7b0e1176f8c8d2ec',1,'create_window(Board *p):&#160;frame.c']]],
+  ['cut_5fimage_6',['cut_image',['../logic_8h.html#a250b891ad265d03cf7a0262a76fb57da',1,'cut_image(MLV_Image *image, Board *p):&#160;logic.c'],['../logic_8c.html#a250b891ad265d03cf7a0262a76fb57da',1,'cut_image(MLV_Image *image, Board *p):&#160;logic.c']]]
 ];

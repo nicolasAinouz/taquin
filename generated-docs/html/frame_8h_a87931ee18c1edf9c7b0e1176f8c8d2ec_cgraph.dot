@@ -1,0 +1,20 @@
+digraph "create_window"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="create_window",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Crée la fenêtre et initialise le plateau de jeu."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cut_image",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$logic_8h.html#a250b891ad265d03cf7a0262a76fb57da",tooltip="Coupe l'image en 16 morceaux et l'assigne à chaque case du plateau."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="draw_image",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$frame_8c.html#a6c8de9ae696daedc30528aa9b8bdbfff",tooltip="Dessine l'image dans la fenêtre."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="draw_image_cut",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$frame_8c.html#a6806582f5c44c6196cedaf9ac7213fe3",tooltip="Dessine l'image dans la case correspondante."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="shuffle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$logic_8h.html#a71b480b8bb01bcc16d4b67382bef3980",tooltip="Mélange le plateau de jeu."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="chek_if_square_click\l_is_around_black_square\l_and_swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$logic_8c.html#ad00023104cac1f36456c1c60727968f1",tooltip="Vérifie si la case sur laquelle l'utilisateur a cliqué est autour de la case vide."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$logic_8c.html#a83eb23a5c9d486c42ec0625261f41fc5",tooltip="Echange deux cases du plateau."];
+}

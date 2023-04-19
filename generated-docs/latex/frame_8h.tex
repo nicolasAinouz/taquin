@@ -8,53 +8,57 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 \doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{frame_8h_a3d14f2b8c725c014f134724b3d490f96}{draw\+\_\+image\+\_\+cut}} (int i, int j, \mbox{\hyperlink{struct_8h_ac68f7ceb26f461247f93909b0d6ef87f}{Carre}} c)
-\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}image sur le plateau sauf celle de la case vide. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{frame_8h_a151f4c66589944d167b894b1b03493b2}{draw\+\_\+image}} ()
-\begin{DoxyCompactList}\small\item\em Dessine contenu dans chaque case du plateau. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{frame_8h_adbf4a23b001075b18efb14b900bce769}{create\+\_\+window}} ()
-\begin{DoxyCompactList}\small\item\em Créer la fenêtre et initialise le plateau de jeu. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{frame_8h_a293d91aefc466948bca9681192cbb5a4}{print\+\_\+victory}} ()
-\begin{DoxyCompactList}\small\item\em Affiche la fin de partie et libère la mémoire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{frame_8h_a6806582f5c44c6196cedaf9ac7213fe3}{draw\+\_\+image\+\_\+cut}} (int i, int j, \mbox{\hyperlink{struct_8h_ab2687f210fc889bf7ec09e81a4a36238}{Square}} c)
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}image dans la case correspondante. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{frame_8h_a6c8de9ae696daedc30528aa9b8bdbfff}{draw\+\_\+image}} (\mbox{\hyperlink{struct_8h_a3c10129367cfae8f208778364a6a928e}{Board}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Dessine l\textquotesingle{}image dans la fenêtre. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{frame_8h_a87931ee18c1edf9c7b0e1176f8c8d2ec}{create\+\_\+window}} (\mbox{\hyperlink{struct_8h_a3c10129367cfae8f208778364a6a928e}{Board}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Crée la fenêtre et initialise le plateau de jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{frame_8h_a5d55b0244736ab412ac40723a6fe4af1}{print\+\_\+victory}} (\mbox{\hyperlink{struct_8h_a3c10129367cfae8f208778364a6a928e}{Board}} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Affiche le message de victoire et libère la mémoire. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Documentation des fonctions}
-\mbox{\Hypertarget{frame_8h_adbf4a23b001075b18efb14b900bce769}\label{frame_8h_adbf4a23b001075b18efb14b900bce769}} 
+\mbox{\Hypertarget{frame_8h_a87931ee18c1edf9c7b0e1176f8c8d2ec}\label{frame_8h_a87931ee18c1edf9c7b0e1176f8c8d2ec}} 
 \index{frame.h@{frame.h}!create\_window@{create\_window}}
 \index{create\_window@{create\_window}!frame.h@{frame.h}}
 \doxysubsubsection{\texorpdfstring{create\_window()}{create\_window()}}
-{\footnotesize\ttfamily void create\+\_\+window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void create\+\_\+window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_8h_a3c10129367cfae8f208778364a6a928e}{Board}} $\ast$}]{p }\end{DoxyParamCaption})}
 
 
 
-Créer la fenêtre et initialise le plateau de jeu. 
+Crée la fenêtre et initialise le plateau de jeu. 
 
 
+\begin{DoxyParams}{Paramètres}
+{\em p} & plateau de jeu \\
+\hline
+\end{DoxyParams}
 
-Définition à la ligne 38 du fichier frame.\+c.
+
+Définition à la ligne 54 du fichier frame.\+c.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{39 \{}
-\DoxyCodeLine{40 }
-\DoxyCodeLine{41     MLV\_create\_window(\textcolor{stringliteral}{"Taquin"}, \textcolor{stringliteral}{"Taquin"}, \mbox{\hyperlink{struct_8h_a241aeeb764887ae5e3de58b98f04b16d}{WIDTH}}, \mbox{\hyperlink{struct_8h_aed89bd71aee8be823e8a20ec4e093c1e}{HEIGHT}});}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{43     MLV\_Image *image = MLV\_load\_image(\textcolor{stringliteral}{"src/res/cat.jpg"});}
-\DoxyCodeLine{44     MLV\_resize\_image(image, 512, 512);}
-\DoxyCodeLine{45 }
-\DoxyCodeLine{46     \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}} = \mbox{\hyperlink{logic_8h_a5d0eb215545a8a2d4194831fceb6a3c5}{init\_plateau}}();}
-\DoxyCodeLine{47     \mbox{\hyperlink{logic_8h_aa4620b517f7b558f19d8bc31c7a0ec19}{cut\_image}}(image);}
-\DoxyCodeLine{48     \mbox{\hyperlink{logic_8h_a1905fe84eb39f020b32c58baf7a76758}{shuffle}}();}
-\DoxyCodeLine{49 }
-\DoxyCodeLine{50     MLV\_free\_image(image);}
-\DoxyCodeLine{51 }
-\DoxyCodeLine{52     \mbox{\hyperlink{frame_8c_a151f4c66589944d167b894b1b03493b2}{draw\_image}}();}
-\DoxyCodeLine{53 \}}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     MLV\_create\_window(\textcolor{stringliteral}{"Taquin"}, \textcolor{stringliteral}{"Taquin"}, \mbox{\hyperlink{struct_8h_a241aeeb764887ae5e3de58b98f04b16d}{WIDTH}}, \mbox{\hyperlink{struct_8h_aed89bd71aee8be823e8a20ec4e093c1e}{HEIGHT}});}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     MLV\_Image *image = MLV\_load\_image(\textcolor{stringliteral}{"src/res/cat.jpg"});}
+\DoxyCodeLine{60     MLV\_resize\_image(image, 512, 512);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \mbox{\hyperlink{logic_8h_a250b891ad265d03cf7a0262a76fb57da}{cut\_image}}(image, p);}
+\DoxyCodeLine{63     \mbox{\hyperlink{logic_8h_a71b480b8bb01bcc16d4b67382bef3980}{shuffle}}(p);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     MLV\_free\_image(image);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \mbox{\hyperlink{frame_8c_a6c8de9ae696daedc30528aa9b8bdbfff}{draw\_image}}(p);}
+\DoxyCodeLine{68 \}}
 
 \end{DoxyCode}
 
 
-Références cut\+\_\+image(), draw\+\_\+image(), H\+E\+I\+G\+HT, init\+\_\+plateau(), p, shuffle(), et W\+I\+D\+TH.
+Références cut\+\_\+image(), draw\+\_\+image(), H\+E\+I\+G\+HT, shuffle(), et W\+I\+D\+TH.
 
 
 
@@ -64,37 +68,43 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
 % FIG 2
 Voici le graphe des appelants de cette fonction \+:
 % FIG 3
-\mbox{\Hypertarget{frame_8h_a151f4c66589944d167b894b1b03493b2}\label{frame_8h_a151f4c66589944d167b894b1b03493b2}} 
+\mbox{\Hypertarget{frame_8h_a6c8de9ae696daedc30528aa9b8bdbfff}\label{frame_8h_a6c8de9ae696daedc30528aa9b8bdbfff}} 
 \index{frame.h@{frame.h}!draw\_image@{draw\_image}}
 \index{draw\_image@{draw\_image}!frame.h@{frame.h}}
 \doxysubsubsection{\texorpdfstring{draw\_image()}{draw\_image()}}
-{\footnotesize\ttfamily void draw\+\_\+image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void draw\+\_\+image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_8h_a3c10129367cfae8f208778364a6a928e}{Board}} $\ast$}]{p }\end{DoxyParamCaption})}
 
 
 
-Dessine contenu dans chaque case du plateau. 
+Dessine l\textquotesingle{}image dans la fenêtre. 
 
 
+\begin{DoxyParams}{Paramètres}
+{\em p} & plateau de jeu \\
+\hline
+\end{DoxyParams}
 
-Définition à la ligne 22 du fichier frame.\+c.
+
+Définition à la ligne 36 du fichier frame.\+c.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{23 \{}
-\DoxyCodeLine{24     MLV\_draw\_filled\_rectangle(0, 0, \mbox{\hyperlink{struct_8h_a241aeeb764887ae5e3de58b98f04b16d}{WIDTH}}, \mbox{\hyperlink{struct_8h_a241aeeb764887ae5e3de58b98f04b16d}{WIDTH}}, MLV\_COLOR\_BLACK);}
-\DoxyCodeLine{25     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{struct_8h_aa6e1cb1e33dd2dba64a1481445155044}{NB\_LIG}}; i++)}
-\DoxyCodeLine{26     \{}
-\DoxyCodeLine{27         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{struct_8h_a3abe884c18182831cac6f12ecaf06f8b}{NB\_COL}}; j++)}
-\DoxyCodeLine{28         \{}
-\DoxyCodeLine{29             \mbox{\hyperlink{frame_8c_a3d14f2b8c725c014f134724b3d490f96}{draw\_image\_cut}}(i, j, \mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}}[i][j]);}
-\DoxyCodeLine{30         \}}
-\DoxyCodeLine{31     \}}
-\DoxyCodeLine{32 \}}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{38     MLV\_draw\_filled\_rectangle(0, 0, \mbox{\hyperlink{struct_8h_a241aeeb764887ae5e3de58b98f04b16d}{WIDTH}}, \mbox{\hyperlink{struct_8h_a241aeeb764887ae5e3de58b98f04b16d}{WIDTH}}, MLV\_COLOR\_BLACK);}
+\DoxyCodeLine{39     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{struct_8h_aa6e1cb1e33dd2dba64a1481445155044}{NB\_LIG}}; i++)}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{struct_8h_a3abe884c18182831cac6f12ecaf06f8b}{NB\_COL}}; j++)}
+\DoxyCodeLine{42         \{}
+\DoxyCodeLine{43             \textcolor{keywordflow}{if} (p-\/>\mbox{\hyperlink{structboard_a4cd19661a584dafded15f1b2a3d74a58}{bloc}}[i][j].\mbox{\hyperlink{structsquare_a07a58874d9e041c9588ff2ab700c22a7}{line}} != -\/1)}
+\DoxyCodeLine{44                 \mbox{\hyperlink{frame_8c_a6806582f5c44c6196cedaf9ac7213fe3}{draw\_image\_cut}}(i, j, p-\/>\mbox{\hyperlink{structboard_a4cd19661a584dafded15f1b2a3d74a58}{bloc}}[i][j]);}
+\DoxyCodeLine{45         \}}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47 \}}
 
 \end{DoxyCode}
 
 
-Références board\+::bloc, draw\+\_\+image\+\_\+cut(), N\+B\+\_\+\+C\+OL, N\+B\+\_\+\+L\+IG, p, et W\+I\+D\+TH.
+Références board\+::bloc, draw\+\_\+image\+\_\+cut(), square\+::line, N\+B\+\_\+\+C\+OL, N\+B\+\_\+\+L\+IG, et W\+I\+D\+TH.
 
 
 
@@ -104,78 +114,95 @@ Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
 % FIG 4
 Voici le graphe des appelants de cette fonction \+:
 % FIG 5
-\mbox{\Hypertarget{frame_8h_a3d14f2b8c725c014f134724b3d490f96}\label{frame_8h_a3d14f2b8c725c014f134724b3d490f96}} 
+\mbox{\Hypertarget{frame_8h_a6806582f5c44c6196cedaf9ac7213fe3}\label{frame_8h_a6806582f5c44c6196cedaf9ac7213fe3}} 
 \index{frame.h@{frame.h}!draw\_image\_cut@{draw\_image\_cut}}
 \index{draw\_image\_cut@{draw\_image\_cut}!frame.h@{frame.h}}
 \doxysubsubsection{\texorpdfstring{draw\_image\_cut()}{draw\_image\_cut()}}
-{\footnotesize\ttfamily void draw\+\_\+image\+\_\+cut (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\mbox{\hyperlink{struct_8h_ac68f7ceb26f461247f93909b0d6ef87f}{Carre}}}]{c }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void draw\+\_\+image\+\_\+cut (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{\mbox{\hyperlink{struct_8h_ab2687f210fc889bf7ec09e81a4a36238}{Square}}}]{c }\end{DoxyParamCaption})}
 
 
 
-Dessine l\textquotesingle{}image sur le plateau sauf celle de la case vide. 
+Dessine l\textquotesingle{}image dans la case correspondante. 
 
 
+\begin{DoxyParams}{Paramètres}
+{\em i} & coordonnée i de la case \\
+\hline
+{\em j} & coordonnée j de la case \\
+\hline
+{\em c} & case à dessiner \\
+\hline
+\end{DoxyParams}
 
-Définition à la ligne 12 du fichier frame.\+c.
+
+Définition à la ligne 26 du fichier frame.\+c.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{13 \{}
-\DoxyCodeLine{14     \textcolor{keywordflow}{if} (c.\mbox{\hyperlink{structcarre_a0c3fa6a47c7ce3622d1ebfac9d89f0a6}{line}} != -\/1)}
-\DoxyCodeLine{15         MLV\_draw\_image(c.\mbox{\hyperlink{structcarre_a42c7ecd4731a3f416fa3040f24553f4b}{img}}, j * (\mbox{\hyperlink{struct_8h_a2a94d2f61c849b4aeed9684aae52c8c1}{SIZE\_CASE}} + \mbox{\hyperlink{struct_8h_ae266d6533efcea2d0fdc2f48ce895207}{SPACE\_BETWEEN\_CASE}}), i * (\mbox{\hyperlink{struct_8h_a2a94d2f61c849b4aeed9684aae52c8c1}{SIZE\_CASE}} + \mbox{\hyperlink{struct_8h_ae266d6533efcea2d0fdc2f48ce895207}{SPACE\_BETWEEN\_CASE}}));}
-\DoxyCodeLine{16 \}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     MLV\_draw\_image(c.\mbox{\hyperlink{structsquare_a21d9b1e848441fba18936140ad141776}{img}}, j * (\mbox{\hyperlink{struct_8h_a2a94d2f61c849b4aeed9684aae52c8c1}{SIZE\_CASE}} + \mbox{\hyperlink{struct_8h_ae266d6533efcea2d0fdc2f48ce895207}{SPACE\_BETWEEN\_CASE}}), i * (\mbox{\hyperlink{struct_8h_a2a94d2f61c849b4aeed9684aae52c8c1}{SIZE\_CASE}} + \mbox{\hyperlink{struct_8h_ae266d6533efcea2d0fdc2f48ce895207}{SPACE\_BETWEEN\_CASE}}));}
+\DoxyCodeLine{29 \}}
 
 \end{DoxyCode}
 
 
-Références carre\+::img, carre\+::line, S\+I\+Z\+E\+\_\+\+C\+A\+SE, et S\+P\+A\+C\+E\+\_\+\+B\+E\+T\+W\+E\+E\+N\+\_\+\+C\+A\+SE.
+Références square\+::img, S\+I\+Z\+E\+\_\+\+C\+A\+SE, et S\+P\+A\+C\+E\+\_\+\+B\+E\+T\+W\+E\+E\+N\+\_\+\+C\+A\+SE.
 
 
 
-Référencé par draw\+\_\+image().
+Référencé par draw\+\_\+image(), et print\+\_\+victory().
 
 Voici le graphe des appelants de cette fonction \+:
 % FIG 6
-\mbox{\Hypertarget{frame_8h_a293d91aefc466948bca9681192cbb5a4}\label{frame_8h_a293d91aefc466948bca9681192cbb5a4}} 
+\mbox{\Hypertarget{frame_8h_a5d55b0244736ab412ac40723a6fe4af1}\label{frame_8h_a5d55b0244736ab412ac40723a6fe4af1}} 
 \index{frame.h@{frame.h}!print\_victory@{print\_victory}}
 \index{print\_victory@{print\_victory}!frame.h@{frame.h}}
 \doxysubsubsection{\texorpdfstring{print\_victory()}{print\_victory()}}
-{\footnotesize\ttfamily void print\+\_\+victory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void print\+\_\+victory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_8h_a3c10129367cfae8f208778364a6a928e}{Board}} $\ast$}]{p }\end{DoxyParamCaption})}
 
 
 
-Affiche la fin de partie et libère la mémoire. 
+Affiche le message de victoire et libère la mémoire. 
 
 
+\begin{DoxyParams}{Paramètres}
+{\em p} & plateau de jeu \\
+\hline
+\end{DoxyParams}
 
-Définition à la ligne 59 du fichier frame.\+c.
+
+Définition à la ligne 75 du fichier frame.\+c.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{60 \{}
-\DoxyCodeLine{61     MLV\_draw\_text(100, 100, \textcolor{stringliteral}{"Victory"}, MLV\_COLOR\_RED);}
-\DoxyCodeLine{62     MLV\_actualise\_window();}
-\DoxyCodeLine{63     MLV\_wait\_seconds(15);}
-\DoxyCodeLine{64     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{struct_8h_aa6e1cb1e33dd2dba64a1481445155044}{NB\_LIG}}; i++)}
-\DoxyCodeLine{65     \{}
-\DoxyCodeLine{66         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{struct_8h_a3abe884c18182831cac6f12ecaf06f8b}{NB\_COL}}; j++)}
-\DoxyCodeLine{67         \{}
-\DoxyCodeLine{68             MLV\_free\_image((\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}}-\/>\mbox{\hyperlink{structboard_a4800b7da46b8e67c74cb978aaab8c45e}{bloc}})[i][j].img);}
-\DoxyCodeLine{69         \}}
-\DoxyCodeLine{70     \}}
-\DoxyCodeLine{71     free(\mbox{\hyperlink{struct_8h_a266661011974bab829c073976079e607}{p}});}
-\DoxyCodeLine{72 }
-\DoxyCodeLine{73     MLV\_free\_window();}
-\DoxyCodeLine{74 \}}
+\DoxyCodeLine{76 \{}
+\DoxyCodeLine{77     MLV\_draw\_text(200, 200, \textcolor{stringliteral}{"Victory"}, MLV\_COLOR\_RED);}
+\DoxyCodeLine{78     \mbox{\hyperlink{frame_8c_a6806582f5c44c6196cedaf9ac7213fe3}{draw\_image\_cut}}(3, 3, p-\/>\mbox{\hyperlink{structboard_a4cd19661a584dafded15f1b2a3d74a58}{bloc}}[3][3]);}
+\DoxyCodeLine{79     MLV\_actualise\_window();}
+\DoxyCodeLine{80     MLV\_wait\_seconds(15);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{struct_8h_aa6e1cb1e33dd2dba64a1481445155044}{NB\_LIG}}; i++)}
+\DoxyCodeLine{83     \{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{struct_8h_a3abe884c18182831cac6f12ecaf06f8b}{NB\_COL}}; j++)}
+\DoxyCodeLine{85         \{}
+\DoxyCodeLine{86             MLV\_free\_image((p-\/>\mbox{\hyperlink{structboard_a4cd19661a584dafded15f1b2a3d74a58}{bloc}})[i][j].img);}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89     free(p);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     MLV\_free\_window();}
+\DoxyCodeLine{92 \}}
 
 \end{DoxyCode}
 
 
-Références board\+::bloc, N\+B\+\_\+\+C\+OL, N\+B\+\_\+\+L\+IG, et p.
+Références board\+::bloc, draw\+\_\+image\+\_\+cut(), N\+B\+\_\+\+C\+OL, et N\+B\+\_\+\+L\+IG.
 
 
 
 Référencé par main().
 
-Voici le graphe des appelants de cette fonction \+:
+Voici le graphe d\textquotesingle{}appel pour cette fonction \+:
 % FIG 7
+Voici le graphe des appelants de cette fonction \+:
+% FIG 8

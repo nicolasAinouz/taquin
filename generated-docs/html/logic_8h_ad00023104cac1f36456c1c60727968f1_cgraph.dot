@@ -1,0 +1,10 @@
+digraph "chek_if_square_click_is_around_black_square_and_swap"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="chek_if_square_click\l_is_around_black_square\l_and_swap",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Vérifie si la case sur laquelle l'utilisateur a cliqué est autour de la case vide."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$logic_8c.html#a83eb23a5c9d486c42ec0625261f41fc5",tooltip="Echange deux cases du plateau."];
+}
