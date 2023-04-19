@@ -23,6 +23,4 @@ typedef struct board
 
 } Board;
 
-Board *p;
-
 #endif

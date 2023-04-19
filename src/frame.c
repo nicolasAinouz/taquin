@@ -1,4 +1,15 @@
 #include <stdio.h>
+/**
+ * @file frame.c
+ * @author Nicolas Ainouz
+ * @brief Partie graphique du jeu.
+ * @version 0.1
+ * @date 2023-04-19
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include <stdlib.h>
 #include <MLV/MLV_all.h>
 
@@ -6,8 +17,11 @@
 #include "include/logic.h"
 
 /**
- * @brief Dessine l'image sur le plateau sauf celle de la case vide.
- *
+ * @brief Dessine l'image dans la case correspondante.
+ * 
+ * @param i coordonnée i de la case
+ * @param j coordonnée j de la case
+ * @param c case à dessiner
  */
 void draw_image_cut(int i, int j, Square c)
 {
@@ -15,10 +29,11 @@ void draw_image_cut(int i, int j, Square c)
 }
 
 /**
- * @brief Dessine contenu dans chaque case du plateau.
- *
+ * @brief Dessine l'image dans la fenêtre.
+ * 
+ * @param p plateau de jeu
  */
-void draw_image()
+void draw_image(Board *p)
 {
     MLV_draw_filled_rectangle(0, 0, WIDTH, WIDTH, MLV_COLOR_BLACK);
     for (int i = 0; i < NB_LIG; i++)
@@ -32,10 +47,11 @@ void draw_image()
 }
 
 /**
- * @brief Créer la fenêtre et initialise le plateau de jeu.
- *
+ * @brief Crée la fenêtre et initialise le plateau de jeu.
+ * 
+ * @param p plateau de jeu
  */
-void create_window()
+void create_window(Board *p)
 {
 
     MLV_create_window("Taquin", "Taquin", WIDTH, HEIGHT);
@@ -43,20 +59,20 @@ void create_window()
     MLV_Image *image = MLV_load_image("src/res/cat.jpg");
     MLV_resize_image(image, 512, 512);
 
-    p = init_plateau();
-    cut_image(image);
-    shuffle();
+    cut_image(image, p);
+    shuffle(p);
 
     MLV_free_image(image);
 
-    draw_image();
+    draw_image(p);
 }
 
 /**
- * @brief Affiche la fin de partie et libère la mémoire.
- *
+ * @brief Affiche le message de victoire et libère la mémoire.
+ * 
+ * @param p plateau de jeu
  */
-void print_victory()
+void print_victory(Board *p)
 {
     MLV_draw_text(200, 200, "Victory", MLV_COLOR_RED);
     draw_image_cut(3, 3, p->bloc[3][3]);

@@ -1,3 +1,13 @@
+/**
+ * @file logic.c
+ * @author Nicolas Ainouz
+ * @brief Partie logique du jeu.
+ * @version 0.1
+ * @date 2023-04-19
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <MLV/MLV_all.h>
@@ -8,14 +18,12 @@
 
 /**
  * @brief Initialise le plateau de jeu.
- * @return Board
+ * @param p plateau de jeu
  *
  */
-Board *init_plateau()
+void init_plateau(Board *p)
 {
     int i, j;
-
-    p = malloc(sizeof(Board));
 
     for (i = 0; i < NB_LIG; i++)
     {
@@ -23,27 +31,27 @@ Board *init_plateau()
         {
             if (!(i == 3 && j == 3))
             {
-                (p->bloc[i][j]).line = i;
-                (p->bloc[i][j]).column = j;
-                (p->bloc[i][j]).img = NULL;
+                (p->bloc)[i][j].line = i;
+                (p->bloc)[i][j].column = j;
+                (p->bloc)[i][j].img = NULL;
             }
             else
             {
-                (p->bloc[i][j]).line = -1;
-                (p->bloc[i][j]).column = -1;
-                (p->bloc[i][j]).img = NULL;
+                (p->bloc)[i][j].line = -1;
+                (p->bloc)[i][j].column = -1;
+                (p->bloc)[i][j].img = NULL;
             }
         }
     }
-    return p;
 }
 
 /**
  * @brief Coupe l'image en 16 morceaux et l'assigne à chaque case du plateau.
  * @param image
+ * @param p plateau de jeu
  *
  */
-void cut_image(MLV_Image *image)
+void cut_image(MLV_Image *image, Board *p)
 {
     for (int i = 0; i < NB_LIG; i++)
     {
@@ -56,9 +64,10 @@ void cut_image(MLV_Image *image)
 
 /**
  * @brief Mélange le plateau de jeu.
+ * @param p plateau de jeu
  *
  */
-void shuffle()
+void shuffle(Board *p)
 {
     int x, y;
     for (int i = 0; i < 1000; i++)
@@ -66,15 +75,20 @@ void shuffle()
         x = rand() % 4;
         y = rand() % 4;
 
-        chek_if_square_click_is_around_black_square_and_swap(p->bloc[x][y]);
+        chek_if_square_click_is_around_black_square_and_swap(p->bloc[x][y], p);
     }
 }
 
 /**
  * @brief Echange deux cases du plateau.
+ * @param x1 Coordonnée x de la première case.
+ * @param y1 Coordonnée y de la première case.
+ * @param x2 Coordonnée x de la seconde case.
+ * @param y2 Coordonnée y de la seconde case.
+ * @param p plateau de jeu
  *
  */
-void swap(int x1, int y1, int x2, int y2)
+void swap(int x1, int y1, int x2, int y2, Board *p)
 {
     Square temp = p->bloc[y1][x1];
     p->bloc[y1][x1] = p->bloc[y2][x2];
@@ -82,10 +96,14 @@ void swap(int x1, int y1, int x2, int y2)
 }
 
 /**
- * @brief Retourne la case du plateau sur laquelle l'utilisateur a cliqué en fonction des coordonnées du clic.
+ * @brief Récupère la case sur laquelle l'utilisateur a cliqué.
+ * @param x Coordonnée x de la case.
+ * @param y Coordonnée y de la case.
+ * @param p Plateau de jeu.
+ * @return Case sur laquelle l'utilisateur a cliqué.
  *
  */
-Square get_position_square_click(int x, int y)
+Square get_position_square_click(int x, int y, Board *p)
 {
     x = x / (SIZE_CASE + SPACE_BETWEEN_CASE);
     y = y / (SIZE_CASE + SPACE_BETWEEN_CASE);
@@ -94,10 +112,12 @@ Square get_position_square_click(int x, int y)
 }
 
 /**
- * @brief Vérifie si la case sur laquelle l'utilisateur a cliqué est à côté de la case vide et l'échange si c'est le cas.
- *
+ * @brief Vérifie si la case sur laquelle l'utilisateur a cliqué est autour de la case vide.
+ * 
+ * @param square_click Case sur laquelle l'utilisateur a cliqué.
+ * @param p Plateau de jeu.
  */
-void chek_if_square_click_is_around_black_square_and_swap(Square square_click)
+void chek_if_square_click_is_around_black_square_and_swap(Square square_click, Board *p)
 {
     for (int i = 0; i < NB_LIG; i++)
     {
@@ -109,22 +129,22 @@ void chek_if_square_click_is_around_black_square_and_swap(Square square_click)
 
                 if (p->bloc[j][i + 1].line == -1)
                 {
-                    swap(i, j, i + 1, j);
+                    swap(i, j, i + 1, j, p);
                 }
                 else if (p->bloc[j][i - 1].line == -1)
                 {
 
-                    swap(i, j, i - 1, j);
+                    swap(i, j, i - 1, j, p);
                 }
                 else if (p->bloc[j + 1][i].line == -1)
                 {
 
-                    swap(i, j, i, j + 1);
+                    swap(i, j, i, j + 1, p);
                 }
                 else if (p->bloc[j - 1][i].line == -1)
                 {
 
-                    swap(i, j, i, j - 1);
+                    swap(i, j, i, j - 1, p);
                 }
 
                 return;
@@ -134,24 +154,28 @@ void chek_if_square_click_is_around_black_square_and_swap(Square square_click)
 }
 
 /**
- * @brief Gère le déplacement des cases du plateau.
- *
+ * @brief Déplace la case sur laquelle l'utilisateur a cliqué.
+ * 
+ * @param x Coordonnée x de la souris.
+ * @param y Coordonnée y de la souris.
+ * @param p Plateau de jeu.
  */
-void move_case(int x, int y)
+void move_case(int x, int y, Board *p)
 {
-    Square square_click = get_position_square_click(x, y);
-
-    chek_if_square_click_is_around_black_square_and_swap(square_click);
+    Square square_click = get_position_square_click(x, y, p);
+    chek_if_square_click_is_around_black_square_and_swap(square_click, p);
 
     MLV_clear_window(MLV_COLOR_BLACK);
-    draw_image();
+    draw_image(p);
 }
 
 /**
  * @brief Vérifie si le joueur a gagné.
- *
+ * @param p Plateau de jeu.
+ * 
+ * @return 1 si le joueur a gagné, 0 sinon.
  */
-int check_if_victory()
+int check_if_victory(Board *p)
 {
     int victory = 1;
     for (int i = 0; i < NB_LIG; i++)
